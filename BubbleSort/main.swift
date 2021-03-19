@@ -8,6 +8,11 @@
 
 import Foundation
 
+func waitForUserInput() {
+    print("Press return to continue...")
+    _ = readLine()
+}
+
 // Create an empty array
 var dataSet: [Int] = []
 
@@ -19,6 +24,7 @@ for _ in 1...10 {
 // Print the unsorted array
 print("Unsorted:")
 print(dataSet)
+waitForUserInput()
 
 // Loop through the entire array "n" times
 // (however many times there are elements in the array)
@@ -40,8 +46,12 @@ for i in 0..<dataSet.count {
     // Print the array after n passes
     print("Array after pass \(i + 1):")
     print(dataSet)
+    waitForUserInput()
 
 
 }
 
-
+// Print the array when sorted
+print("Sorted array:")
+print(dataSet)
+waitForUserInput()
