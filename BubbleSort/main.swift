@@ -9,7 +9,7 @@
 import Foundation
 
 func waitForUserInput() {
-    print("Press return to continue...")
+    print("\nPress return to continue...")
     _ = readLine()
 }
 
@@ -34,13 +34,13 @@ for i in 0..<dataSet.count {
     for j in 0..<dataSet.count - 1 {
         
         // Compare left value to right value
-        print("Comparing...", terminator: "")
+        print("Comparison \(j + 1)...", terminator: "")
         if dataSet[j] > dataSet[j + 1] {
             // Swap values when left value is more than right value
             let temporaryValue = dataSet[j] // Set aside the left value
             dataSet[j] = dataSet[j + 1]     // Replace left with right
             dataSet[j + 1] = temporaryValue // Replace right with temporary value
-            print(" swapped values", terminator: "")
+            print(" values were swapped.", terminator: "")
         }
         print("")
         
